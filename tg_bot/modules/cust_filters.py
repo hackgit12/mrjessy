@@ -391,7 +391,7 @@ def __chat_settings__(chat_id, user_id):
     return "There are `{}` custom filters here.".format(len(cust_filters))
 
 
-__help__ = """
+__he__ = """
  - /filters: list all active filters in this chat.
 
 *Admin only:*
