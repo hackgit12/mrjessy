@@ -154,12 +154,25 @@ the message will immediately be deleted. A good combo is sometimes to pair this 
 
  - /blacklist: View the current blacklisted words.
 
-*Admin only:*
+*Admin commands:*
  - /addblacklist <triggers>: Add a trigger to the blacklist. Each line is considered one trigger, so using different \
 lines will allow you to add multiple triggers.
  - /unblacklist <triggers>: Remove triggers from the blacklist. Same newline logic applies here, so you can remove \
 multiple triggers at once.
  - /rmblacklist <triggers>: Same as above.
+
+*Example blocklist commands:*
+-> /addblacklist boo Don't scare the ghosts! {tmute 6h}
+- Add a full sentence to the blocklist. This would delete any message containing 'the admins suck'.
+-> /addblacklist "the admins suck" Respect your admins!
+- Stop any bit.ly links using the * shortcut to match any character.
+-> /addblacklist "bit.ly/*" We dont like shorteners!
+- Stop any bit.ly links followed by exactly three characters, to catch bit.ly/hey, but not bit.ly/abcd.
+-> /addblacklist "bit.ly/???" We dont like 3 letter shorteners!
+- Stop people sending zip files, by blacklisting *.zip
+-> /addblacklist "*.zip" zip files are not allowed here.
+- Stop any 🖕 emoji, or any stickers related to it.
+-> /addblacklist 🖕 This emoji is not allowed here.
 """
 
 BLACKLIST_HANDLER = DisableAbleCommandHandler("blacklist", blacklist, filters=Filters.group, pass_args=True,
