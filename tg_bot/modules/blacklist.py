@@ -166,9 +166,9 @@ multiple triggers at once.
 - Add a full sentence to the blocklist. This would delete any message containing 'the admins suck'.
 -> /addblacklist "the admins suck" Respect your admins!
 - Stop any bit.ly links using the * shortcut to match any character.
--> /addblacklist "bit.ly/*" We dont like shorteners!
-- Stop any bit.ly links followed by exactly three characters, to catch bit.ly/hey, but not bit.ly/abcd.
--> /addblacklist "bit.ly/???" We dont like 3 letter shorteners!
+-> /addblacklist "ʙɪᴛ.ʟy/*" We dont like shorteners!
+- Stop any bit.ly links followed by exactly three characters, to catch 𝚋𝚒𝚝.𝚕𝚢/hey, but not 𝚋𝚒𝚝.𝚕𝚢/abcd.
+-> /addblacklist "ʙɪᴛ.lᴜ/???" We dont like 3 letter shorteners!
 - Stop people sending zip files, by blacklisting *.zip
 -> /addblacklist "*.zip" zip files are not allowed here.
 - Stop any 🖕 emoji, or any stickers related to it.
